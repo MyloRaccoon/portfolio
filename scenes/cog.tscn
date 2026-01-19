@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqn3srr48uucj"]
+
+[ext_resource type="Texture2D" uid="uid://dec77mvsp2ntm" path="res://assets/fullcog.png" id="1_h0f2k"]
+[ext_resource type="Script" uid="uid://bqpn5pwyhfepu" path="res://scripts/cog.gd" id="2_tk0bi"]
+
+[node name="Cog" type="Node3D"]
+script = ExtResource("2_tk0bi")
+speed = 0.5
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_h0f2k")

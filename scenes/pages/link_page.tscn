@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0f4idhogw6ly"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_cykwq"]
+[ext_resource type="PackedScene" uid="uid://nauqj8h527xq" path="res://scenes/link_button_3d.tscn" id="2_ma1fn"]
+
+[node name="LinkPage" instance=ExtResource("1_cykwq")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+title = "Links"
+
+[node name="lbl_itch" type="Label3D" parent="." index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.9028488, 0.42346427, 0)
+text = "I post games on"
+
+[node name="link_itch" parent="." index="1" instance=ExtResource("2_ma1fn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91079926, 0.25126076, 0)
+text = "Itch.io"
+url = "https://mylo-racoon.itch.io/"
+
+[node name="lbl_youtube" type="Label3D" parent="." index="2"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.016338825, 0.42346427, 0)
+text = "I post music on"
+
+[node name="link_youtube" parent="." index="3" instance=ExtResource("2_ma1fn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25126076, 0)
+text = "Youtube"
+url = "https://www.youtube.com/@MyloRaccoon"
+
+[node name="lbl_github" type="Label3D" parent="." index="4"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.8064158, 0.42346427, 0)
+text = "I post programs on"
+
+[node name="link_github" parent="." index="5" instance=ExtResource("2_ma1fn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.83394825, 0.25365347, 0)
+text = "Github
+"
+url = "https://github.com/MyloRaccoon/"
+
+[node name="lbl_mail" type="Label3D" parent="." index="6"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0391919, -0.033428997, 0)
+text = "contact me"
+
+[node name="link_mail" parent="." index="7" instance=ExtResource("2_ma1fn")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.026747525, -0.14958173, 0)
+text = "joachim.fevre@gmail.com
+"
+url = "mailto:joachim.fevre@gmail.com"

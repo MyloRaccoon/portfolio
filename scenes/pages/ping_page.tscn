@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://b64t08xgxpj8e"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_8fpqo"]
+[ext_resource type="Texture2D" uid="uid://hfnkceioelp0" path="res://assets/ping_title.png" id="2_bglod"]
+[ext_resource type="Texture2D" uid="uid://cp41e21rk1qt3" path="res://assets/ping_game.png" id="3_ri7h3"]
+[ext_resource type="PackedScene" uid="uid://nauqj8h527xq" path="res://scenes/link_button_3d.tscn" id="4_67421"]
+[ext_resource type="PackedScene" uid="uid://db4cgmllb37yg" path="res://scenes/video_player.tscn" id="5_ri7h3"]
+
+[sub_resource type="FontVariation" id="FontVariation_dfjpg"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ri7h3"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_67421"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_ri7h3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_67421"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_bglod"]
+file = "res://assets/videos/ping_gameplay.ogv"
+
+[node name="PingPage" instance=ExtResource("1_8fpqo")]
+title = "PING"
+
+[node name="duration" type="Label3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91970056, 1.1478424, 0)
+text = "janvier - juin 2023"
+
+[node name="body" type="Label3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.007170737, 0)
+text = "Ping is a tennis game with up to 4 players. It's inspired by the Laser hockey mini-game from the Wii Play game by Nintendo. It's a personnal project that teach me Godot and how to work with a game engine softwoare."
+horizontal_alignment = 0
+autowrap_mode = 3
+
+[node name="img_one" type="Sprite3D" parent="." index="2"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.223709, 0.74692696, 0)
+visible = false
+texture = ExtResource("2_bglod")
+
+[node name="img_two" type="Sprite3D" parent="." index="3"]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, -1.2554682, -0.6258005, 0)
+visible = false
+texture = ExtResource("3_ri7h3")
+
+[node name="link_one" parent="." index="4" instance=ExtResource("4_67421")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7735258, -1.1169753, 0)
+font = SubResource("FontVariation_dfjpg")
+url = "https://github.com/MyloRaccoon/ping"
+
+[node name="link_two" parent="." index="5" instance=ExtResource("4_67421")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7175344, -1.1169753, 0)
+text = "Lien itch.io"
+font = SubResource("FontVariation_dfjpg")
+url = "https://github.com/MyloRaccoon/ping"
+
+[node name="VideoPlayer" parent="." index="6" instance=ExtResource("5_ri7h3")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VideoPlayer" index="0"]
+transform = Transform3D(1.328, 0, 0, 0, -3.278354e-08, -0.75, 0, 0.75, -3.278354e-08, -1.4951241, 0.5293386, 0)
+material_override = SubResource("StandardMaterial3D_67421")
+mesh = SubResource("PlaneMesh_67421")
+
+[node name="SubViewport" type="SubViewport" parent="." index="7"]
+size = Vector2i(1280, 720)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="SubViewport" index="0"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SubViewport/SubViewportContainer" index="0"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_bglod")
+volume_db = -80.0
+autoplay = true
+loop = true

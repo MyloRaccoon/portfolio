@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdwhqhmh66p6i"]
+
+[ext_resource type="Script" uid="uid://mtvta0x1f8be" path="res://scripts/green_light.gd" id="1_vyji5"]
+
+[node name="GreenLight" type="Node3D"]
+script = ExtResource("1_vyji5")

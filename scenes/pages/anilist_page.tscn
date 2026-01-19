@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7m1gq6qb7gtu"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_q8wo1"]
+[ext_resource type="Texture2D" uid="uid://ettq6v6wns2x" path="res://assets/AniList_logo.svg.png" id="2_wm35x"]
+[ext_resource type="Texture2D" uid="uid://bmbdljmr78t1s" path="res://assets/anilistrpc.png" id="3_wm35x"]
+[ext_resource type="PackedScene" uid="uid://nauqj8h527xq" path="res://scenes/link_button_3d.tscn" id="4_nfyfl"]
+
+[sub_resource type="FontVariation" id="FontVariation_k7vhg"]
+
+[node name="AnilistPage" instance=ExtResource("1_q8wo1")]
+title = "AnilistActivityRPC"
+
+[node name="duration" type="Label3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91970056, 1.2733885, 0)
+text = "Décembre 2025"
+
+[node name="body" type="Label3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2413308, 0)
+text = "This is a discord application in python that uses the API of AniList (a manga/anime tracking web site). It allows to show the last AniList activity on a discord profil."
+horizontal_alignment = 0
+autowrap_mode = 3
+
+[node name="img_one" type="Sprite3D" parent="." index="2"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.8962338, 0.89759123, 0)
+texture = ExtResource("2_wm35x")
+
+[node name="img_two" type="Sprite3D" parent="." index="3"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.2444143, -0.13998795, 0)
+texture = ExtResource("3_wm35x")
+
+[node name="link_one" parent="." index="4" instance=ExtResource("4_nfyfl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7735258, -1.1169753, 0)
+font = SubResource("FontVariation_k7vhg")
+url = "github.com/MyloRaccoon/AnilistActivityRPC"

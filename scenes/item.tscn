@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://n4yhs1hu0w3i"]
+
+[ext_resource type="Script" uid="uid://crb3jeyh1wmmy" path="res://scripts/item.gd" id="1_tnite"]
+
+[node name="Item" type="Label3D"]
+text = "test"
+script = ExtResource("1_tnite")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+aabb = AABB(-0.15, -0.05, 0, 0.25, 0.1, 0.1)
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_entered"]

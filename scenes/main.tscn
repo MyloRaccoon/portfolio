@@ -1,0 +1,61 @@
+[gd_scene load_steps=14 format=3 uid="uid://bx0ikyg7jocc4"]
+
+[ext_resource type="Script" uid="uid://6onkd6yi2ody" path="res://scripts/main.gd" id="1_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://reqag365cu75" path="res://assets/bg.png" id="2_85g3d"]
+[ext_resource type="Script" uid="uid://cv8px6y2rtfle" path="res://scripts/camera.gd" id="3_muem4"]
+[ext_resource type="ArrayMesh" uid="uid://dxxw47c1qfl22" path="res://assets/cube.obj" id="4_dp3eg"]
+[ext_resource type="Script" uid="uid://bf5epon7rlja8" path="res://scripts/cube.gd" id="5_0ld40"]
+[ext_resource type="PackedScene" uid="uid://gaouasd81rum" path="res://scenes/nav.tscn" id="6_dp3eg"]
+[ext_resource type="PackedScene" uid="uid://ojsqfkgeabjw" path="res://scenes/pages/about_page.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://drvqynjsjan3m" path="res://scenes/pages/home_page.tscn" id="17_muem4"]
+[ext_resource type="PackedScene" uid="uid://cmvvfr6srmu80" path="res://scenes/pages/project_page.tscn" id="19_0ld40"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_choun"]
+panorama = ExtResource("2_85g3d")
+
+[sub_resource type="Sky" id="Sky_dg77c"]
+sky_material = SubResource("PanoramaSkyMaterial_choun")
+
+[sub_resource type="Environment" id="Environment_kek77"]
+background_mode = 2
+background_color = Color(0.14901961, 0.15686275, 0.20392157, 1)
+sky = SubResource("Sky_dg77c")
+sky_rotation = Vector3(4.1887903, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_color = Color(0.35605046, 0.23602828, 0.4130191, 1)
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_jkv2x")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kek77")
+
+[node name="Camera" type="Node3D" parent="."]
+script = ExtResource("3_muem4")
+
+[node name="Camera3D" type="Camera3D" parent="Camera"]
+transform = Transform3D(1, 0, 0, 0, 0.99975437, -0.022163868, 0, 0.022163868, 0.99975437, -0.030720294, 0.041436195, 2.6706798)
+far = 100000.0
+
+[node name="cube" type="CSGMesh3D" parent="."]
+mesh = ExtResource("4_dp3eg")
+material = SubResource("StandardMaterial3D_h2yge")
+script = ExtResource("5_0ld40")
+
+[node name="Nav" parent="." instance=ExtResource("6_dp3eg")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49054164, 0.89248, 2.354243)
+
+[node name="HomePage" parent="." instance=ExtResource("17_muem4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.6110377)
+
+[node name="ProjectPage" parent="." instance=ExtResource("19_0ld40")]
+
+[node name="AboutPage" parent="." instance=ExtResource("10_choun")]
+state = 2
+
+[connection signal="next_pressed" from="Nav" to="." method="_on_nav_next_pressed"]
+[connection signal="prev_pressed" from="Nav" to="." method="_on_nav_prev_pressed"]
+[connection signal="snapping" from="ProjectPage" to="." method="_on_project_page_snapping"]

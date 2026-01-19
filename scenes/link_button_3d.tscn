@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://nauqj8h527xq"]
+
+[ext_resource type="FontFile" uid="uid://cphn4b311c4vd" path="res://fonts/RobotoMono-Italic-VariableFont_wght.ttf" id="1_8p3yx"]
+[ext_resource type="Script" uid="uid://sprkxi4pb8il" path="res://scripts/link_button_3d.gd" id="1_smr0n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8p3yx"]
+size = Vector3(1.0529785, 0.24414063, 0.12866211)
+
+[node name="LinkButton3D" type="Label3D"]
+text = "Lien Github"
+font = ExtResource("1_8p3yx")
+script = ExtResource("1_smr0n")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_8p3yx")
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

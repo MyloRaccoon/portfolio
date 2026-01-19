@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd482adot0byk"]
+
+[ext_resource type="Script" uid="uid://b4rg5lw1x1nl1" path="res://scripts/super_page_button.gd" id="1_16qll"]
+[ext_resource type="Texture2D" uid="uid://cnebekk6guty4" path="res://assets/arrow.png" id="1_tmiwo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6ct6"]
+size = Vector3(2.303711, 2.040039, 1)
+
+[node name="SuperPageButton" type="Sprite3D"]
+texture = ExtResource("1_tmiwo")
+script = ExtResource("1_16qll")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_y6ct6")
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

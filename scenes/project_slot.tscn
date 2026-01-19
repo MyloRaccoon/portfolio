@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cal10johj6oxe"]
+
+[ext_resource type="Script" uid="uid://bmw05go5p3bwu" path="res://scripts/project_slot.gd" id="1_n6m2w"]
+[ext_resource type="Texture2D" uid="uid://hfnkceioelp0" path="res://assets/ping_title.png" id="1_qo75n"]
+[ext_resource type="PackedScene" uid="uid://nauqj8h527xq" path="res://scenes/link_button_3d.tscn" id="3_cdxn0"]
+
+[sub_resource type="FontVariation" id="FontVariation_udjck"]
+
+[node name="ProjectSlot" type="Node3D"]
+script = ExtResource("1_n6m2w")
+
+[node name="duration" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91970056, 1.1478424, 0)
+text = "janvier - juin 2023"
+
+[node name="body" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.007170737, 0)
+text = "Ping est un jeu de tennis jusqu’à 4 joueurs inspiré du mini-jeu Laser hockey du jeu Wii Play de Nintendo. S’agit d’un projet personnel qui m’a permit l’apprentissage plus approfondit de Godot et du développement avec un moteur de jeu. "
+horizontal_alignment = 0
+autowrap_mode = 3
+
+[node name="img_one" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.223709, 0.74692696, 0)
+texture = ExtResource("1_qo75n")
+
+[node name="img_two" type="Sprite3D" parent="."]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, -1.2554682, -0.6258005, 0)
+
+[node name="link_one" parent="." instance=ExtResource("3_cdxn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7735258, -1.1169753, 0)
+font = SubResource("FontVariation_udjck")
+url = "https://github.com/MyloRaccoon/ping"
+
+[node name="link_two" parent="." instance=ExtResource("3_cdxn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7175344, -1.1169753, 0)
+text = "Lien itch.io"
+font = SubResource("FontVariation_udjck")
+url = "https://github.com/MyloRaccoon/ping"

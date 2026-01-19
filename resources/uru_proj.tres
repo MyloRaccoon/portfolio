@@ -1,0 +1,14 @@
+[gd_resource type="PackedDataContainer" script_class="Project" load_steps=4 format=3 uid="uid://exwxw7tnyn5f"]
+
+[ext_resource type="Texture2D" uid="uid://b4yndj3ms8bll" path="res://assets/uru_one.png" id="1_hpnog"]
+[ext_resource type="Script" uid="uid://bfy5ltyhak5h5" path="res://scripts/project.gd" id="1_k6ylj"]
+[ext_resource type="Texture2D" uid="uid://drhqvv5blll36" path="res://assets/uru_two.png" id="2_b2f5v"]
+
+[resource]
+script = ExtResource("1_k6ylj")
+name = "URU"
+duration = "Septembre 2023 - aujourd'hui"
+body = "Il s’agit de mon plus gros projet et mon projet principal. Il s’agit d’un jeu de puzzle/aventure vue du dessus inspiré de One Shot et Paper Lily. Je le réalise avec Godot."
+image_one = ExtResource("1_hpnog")
+image_two = ExtResource("2_b2f5v")
+metadata/_custom_type_script = "uid://bfy5ltyhak5h5"

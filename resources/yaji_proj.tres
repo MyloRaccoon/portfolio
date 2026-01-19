@@ -1,0 +1,16 @@
+[gd_resource type="PackedDataContainer" script_class="Project" load_steps=4 format=3 uid="uid://bj0dc4qfo5mx0"]
+
+[ext_resource type="Script" uid="uid://bfy5ltyhak5h5" path="res://scripts/project.gd" id="1_mljtq"]
+[ext_resource type="Texture2D" uid="uid://cixanwap74toc" path="res://assets/yaji-menu.PNG" id="1_vn5e3"]
+[ext_resource type="Texture2D" uid="uid://dh2hiw3enyrj6" path="res://assets/yaji-game.PNG" id="2_28evy"]
+
+[resource]
+script = ExtResource("1_mljtq")
+name = "Yaji-Rush!"
+duration = "Janvier - Juin 2023"
+body = "Yaji-Rush est mon premier projet de jeu complet. Je l’ai réalisé en tant que projet personnel avec le framework python Pygame. Le jeu contient plusieurs mode de jeu dont un à 2 joueur, un système de score et de high-score, et un système de paramétrages dont le choix des contrôles. "
+image_one = ExtResource("1_vn5e3")
+image_two = ExtResource("2_28evy")
+link_one_lbl = "Lien Github"
+link_one_url = "https://github.com/MyloRaccoon/yaji-rush"
+metadata/_custom_type_script = "uid://bfy5ltyhak5h5"

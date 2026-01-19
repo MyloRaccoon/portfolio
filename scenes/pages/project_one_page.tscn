@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bavkdtpqm5c88"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_drw2e"]
+[ext_resource type="Texture2D" uid="uid://dvt8iaa14riup" path="res://assets/swiptuto.png" id="2_72bqq"]
+
+[node name="ProjectOnePage" instance=ExtResource("1_drw2e")]
+title = "My projects"
+
+[node name="welcome" type="Label3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56041354, 0)
+text = "Here is my projects"
+autowrap_mode = 3
+
+[node name="tuto" type="Label3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51464045, 0.027687132, 0)
+text = "Swip up and down with your mouse"
+autowrap_mode = 3
+
+[node name="img" type="Sprite3D" parent="." index="2"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -0.8962338, -0.003605783, 0)
+texture = ExtResource("2_72bqq")

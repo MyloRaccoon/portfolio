@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://djx6nddexkn6a"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_mxf1i"]
+[ext_resource type="Texture2D" uid="uid://dm42xoluefu8i" path="res://icon.svg" id="2_s2m4m"]
+
+[node name="SkillGameDevPage" instance=ExtResource("1_mxf1i")]
+title = "Game developpement"
+
+[node name="title" type="Label3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4355086, 1.450621, 0)
+text = "Game Developpement"
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026645422, 0.10701209, 2.3841858e-07)
+texture = ExtResource("2_s2m4m")
+
+[node name="Label3D" type="Label3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040488854, 0.9283908, 0)
+text = "Developping 2D games on Godot"

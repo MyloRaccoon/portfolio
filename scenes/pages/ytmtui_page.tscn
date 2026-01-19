@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3cmkqvlxwhdi"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_5cuy5"]
+[ext_resource type="Texture2D" uid="uid://r2p1s5be5pdy" path="res://assets/ytmtui.png" id="2_8yi2f"]
+[ext_resource type="PackedScene" uid="uid://nauqj8h527xq" path="res://scenes/link_button_3d.tscn" id="4_0l2w2"]
+
+[sub_resource type="FontVariation" id="FontVariation_pabli"]
+
+[node name="YTMTUIPage" instance=ExtResource("1_5cuy5")]
+title = "YTMTUI"
+
+[node name="duration" type="Label3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5010988, 0.13314986, 0)
+text = "Septembre 2025"
+
+[node name="body" type="Label3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8315879, -0.61892134, 0)
+text = "YouTube Music Textual User Interface is a youtube music client that runs in a terminal with the help of the Textual python framework and an unoficial youtube music API. "
+horizontal_alignment = 0
+autowrap_mode = 3
+width = 800.0
+
+[node name="img_one" type="Sprite3D" parent="." index="2"]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -0.5731782, 0.7068184, 0)
+texture = ExtResource("2_8yi2f")
+
+[node name="link_one" parent="." index="3" instance=ExtResource("4_0l2w2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7735258, -1.1169753, 0)
+font = SubResource("FontVariation_pabli")
+url = "https://github.com/MyloRaccoon/YTMTUI"

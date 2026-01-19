@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://drvqynjsjan3m"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_sfv0a"]
+
+[node name="HomePage" instance=ExtResource("1_sfv0a")]
+
+[node name="welcome" type="Label3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.007170737, 0)
+text = "Welcome to Mylo's portfolio !"
+autowrap_mode = 3

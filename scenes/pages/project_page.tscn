@@ -1,0 +1,52 @@
+[gd_scene load_steps=13 format=3 uid="uid://cmvvfr6srmu80"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_58e5t"]
+[ext_resource type="Texture2D" uid="uid://dec77mvsp2ntm" path="res://assets/fullcog.png" id="2_lswtc"]
+[ext_resource type="Script" uid="uid://bqgwn8q04jhnh" path="res://scripts/project_page.gd" id="2_q8r3i"]
+[ext_resource type="Script" uid="uid://c74gv06fnjt53" path="res://scripts/main_cog.gd" id="3_j8onr"]
+[ext_resource type="PackedScene" uid="uid://c0sjkyhm12xs1" path="res://scenes/project_manager.tscn" id="4_16keb"]
+[ext_resource type="PackedScene" uid="uid://bavkdtpqm5c88" path="res://scenes/pages/project_one_page.tscn" id="6_k8b2d"]
+[ext_resource type="PackedScene" uid="uid://b64t08xgxpj8e" path="res://scenes/pages/ping_page.tscn" id="7_16keb"]
+[ext_resource type="PackedScene" uid="uid://m26ob8ioywit" path="res://scenes/pages/yaji_page.tscn" id="8_hi0px"]
+[ext_resource type="PackedScene" uid="uid://t8ib4oqirxuw" path="res://scenes/pages/uru_page.tscn" id="9_16keb"]
+[ext_resource type="PackedScene" uid="uid://b3cmkqvlxwhdi" path="res://scenes/pages/ytmtui_page.tscn" id="10_hi0px"]
+[ext_resource type="PackedScene" uid="uid://cij76rl2ocisb" path="res://scenes/item_list.tscn" id="11_hi0px"]
+[ext_resource type="PackedScene" uid="uid://b7m1gq6qb7gtu" path="res://scenes/pages/anilist_page.tscn" id="11_q8r3i"]
+
+[node name="ProjectPage" instance=ExtResource("1_58e5t")]
+script = ExtResource("2_q8r3i")
+state = 2
+
+[node name="MainCog" type="Sprite3D" parent="." index="0"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.4930742, -0.23260689, 1.741431)
+modulate = Color(0.45490196, 0, 0.5803922, 1)
+texture = ExtResource("2_lswtc")
+script = ExtResource("3_j8onr")
+state = 2
+
+[node name="ProjectManager" parent="." index="1" instance=ExtResource("4_16keb")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 1.2086017)
+
+[node name="ProjectOnePage" parent="ProjectManager" index="0" instance=ExtResource("6_k8b2d")]
+state = 2
+
+[node name="PingPage" parent="ProjectManager" index="1" instance=ExtResource("7_16keb")]
+state = 2
+
+[node name="YajiPage" parent="ProjectManager" index="2" instance=ExtResource("8_hi0px")]
+state = 2
+
+[node name="UruPage" parent="ProjectManager" index="3" instance=ExtResource("9_16keb")]
+state = 2
+
+[node name="YTMTUIPage" parent="ProjectManager" index="4" instance=ExtResource("10_hi0px")]
+state = 2
+
+[node name="AnilistPage" parent="ProjectManager" index="5" instance=ExtResource("11_q8r3i")]
+state = 2
+
+[node name="ItemList" parent="." index="2" instance=ExtResource("11_hi0px")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.6, 1.6)
+state = 2
+
+[connection signal="snapped" from="ItemList" to="." method="_on_item_list_snapped"]

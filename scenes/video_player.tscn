@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://db4cgmllb37yg"]
+
+[ext_resource type="Script" uid="uid://ckdpitvy5kfwx" path="res://scripts/video_player.gd" id="1_0s5mj"]
+
+[node name="VideoPlayer" type="Node3D"]
+script = ExtResource("1_0s5mj")
