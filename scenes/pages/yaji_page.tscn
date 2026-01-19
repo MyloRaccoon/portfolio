@@ -19,7 +19,7 @@ albedo_texture = SubResource("ViewportTexture_ri7h3")
 [sub_resource type="PlaneMesh" id="PlaneMesh_16eyx"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_oyqqe"]
-file = "res://assets/videos/yaji_rush.ogv"
+file = "res://assets/videos/yaji.ogv"
 
 [node name="YajiPage" instance=ExtResource("1_grixl")]
 title = "Yaji-Rush!"

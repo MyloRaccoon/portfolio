@@ -19,7 +19,7 @@ albedo_texture = SubResource("ViewportTexture_ri7h3")
 [sub_resource type="PlaneMesh" id="PlaneMesh_67421"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_bglod"]
-file = "res://assets/videos/ping_gameplay.ogv"
+file = "res://assets/videos/ping.ogv"
 
 [node name="PingPage" instance=ExtResource("1_8fpqo")]
 title = "PING"
