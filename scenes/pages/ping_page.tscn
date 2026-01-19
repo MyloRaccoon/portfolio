@@ -26,7 +26,7 @@ title = "PING"
 
 [node name="duration" type="Label3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91970056, 1.1478424, 0)
-text = "janvier - juin 2023"
+text = "January - May 2024"
 
 [node name="body" type="Label3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.007170737, 0)
@@ -51,7 +51,7 @@ url = "https://github.com/MyloRaccoon/ping"
 
 [node name="link_two" parent="." index="5" instance=ExtResource("4_67421")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7175344, -1.1169753, 0)
-text = "Lien itch.io"
+text = "Link itch.io"
 font = SubResource("FontVariation_dfjpg")
 url = "https://github.com/MyloRaccoon/ping"
 

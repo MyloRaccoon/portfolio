@@ -9,7 +9,7 @@ title = "URU"
 
 [node name="duration" type="Label3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91970056, 0.78836846, 0)
-text = "Septembre 2023 - aujourd'hui"
+text = "September 2023 - today"
 
 [node name="body" type="Label3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1021564, 0)

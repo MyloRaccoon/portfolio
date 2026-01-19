@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmvvfr6srmu80"]
+[gd_scene load_steps=14 format=3 uid="uid://cmvvfr6srmu80"]
 
 [ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_58e5t"]
 [ext_resource type="Texture2D" uid="uid://dec77mvsp2ntm" path="res://assets/fullcog.png" id="2_lswtc"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://m26ob8ioywit" path="res://scenes/pages/yaji_page.tscn" id="8_hi0px"]
 [ext_resource type="PackedScene" uid="uid://t8ib4oqirxuw" path="res://scenes/pages/uru_page.tscn" id="9_16keb"]
 [ext_resource type="PackedScene" uid="uid://b3cmkqvlxwhdi" path="res://scenes/pages/ytmtui_page.tscn" id="10_hi0px"]
+[ext_resource type="PackedScene" uid="uid://bdjk3pdwrvbt" path="res://scenes/pages/cool_tool_page.tscn" id="11_1yaj3"]
 [ext_resource type="PackedScene" uid="uid://cij76rl2ocisb" path="res://scenes/item_list.tscn" id="11_hi0px"]
 [ext_resource type="PackedScene" uid="uid://b7m1gq6qb7gtu" path="res://scenes/pages/anilist_page.tscn" id="11_q8r3i"]
 
@@ -42,7 +43,10 @@ state = 2
 [node name="YTMTUIPage" parent="ProjectManager" index="4" instance=ExtResource("10_hi0px")]
 state = 2
 
-[node name="AnilistPage" parent="ProjectManager" index="5" instance=ExtResource("11_q8r3i")]
+[node name="CoolToolPage" parent="ProjectManager" index="5" instance=ExtResource("11_1yaj3")]
+state = 2
+
+[node name="AnilistPage" parent="ProjectManager" index="6" instance=ExtResource("11_q8r3i")]
 state = 2
 
 [node name="ItemList" parent="." index="2" instance=ExtResource("11_hi0px")]

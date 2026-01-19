@@ -12,7 +12,7 @@ title = "AnilistActivityRPC"
 
 [node name="duration" type="Label3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91970056, 1.2733885, 0)
-text = "Décembre 2025"
+text = "December 2025"
 
 [node name="body" type="Label3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2413308, 0)

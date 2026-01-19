@@ -7,7 +7,7 @@
 size = Vector3(1.0529785, 0.24414063, 0.12866211)
 
 [node name="LinkButton3D" type="Label3D"]
-text = "Lien Github"
+text = "Link Github"
 font = ExtResource("1_8p3yx")
 script = ExtResource("1_smr0n")
 

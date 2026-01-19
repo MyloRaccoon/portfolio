@@ -11,7 +11,7 @@ title = "YTMTUI"
 
 [node name="duration" type="Label3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5010988, 0.13314986, 0)
-text = "Septembre 2025"
+text = "September 2025"
 
 [node name="body" type="Label3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8315879, -0.61892134, 0)

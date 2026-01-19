@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ojsqfkgeabjw"]
+[gd_scene load_steps=13 format=3 uid="uid://ojsqfkgeabjw"]
 
 [ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_vv6bg"]
 [ext_resource type="Script" uid="uid://cd3xgk14hsw6e" path="res://scripts/about_page.gd" id="2_5rn4r"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://38jm5bt7df66" path="res://scenes/pages/skill_prog_page.tscn" id="7_pmgt2"]
 [ext_resource type="PackedScene" uid="uid://djx6nddexkn6a" path="res://scenes/pages/skill_game_dev_page.tscn" id="8_gtpch"]
 [ext_resource type="PackedScene" uid="uid://bkpa8hffhfqoh" path="res://scenes/pages/skill_music_page.tscn" id="9_gtpch"]
+[ext_resource type="PackedScene" uid="uid://hj8akg5j8voo" path="res://scenes/pages/github_web_page.tscn" id="11_yjcyt"]
 
 [node name="AboutPage" instance=ExtResource("1_vv6bg")]
 script = ExtResource("2_5rn4r")
@@ -40,6 +41,9 @@ state = 2
 state = 2
 
 [node name="LinkPage" parent="ProjectManager" index="4" instance=ExtResource("6_5rn4r")]
+state = 2
+
+[node name="GithubWebPage" parent="ProjectManager" index="5" instance=ExtResource("11_yjcyt")]
 state = 2
 
 [node name="ItemList" parent="." index="2" instance=ExtResource("7_18hjt")]

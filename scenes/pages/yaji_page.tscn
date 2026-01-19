@@ -26,7 +26,7 @@ title = "Yaji-Rush!"
 
 [node name="duration" type="Label3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91970056, 1.0143682, 0)
-text = "Janvier - Juin 2023"
+text = "January - June 2023"
 
 [node name="body" type="Label3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.007170737, 0)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://hj8akg5j8voo"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_y63u0"]
+[ext_resource type="PackedScene" uid="uid://nauqj8h527xq" path="res://scenes/link_button_3d.tscn" id="2_f407r"]
+
+[node name="GithubWebPage" instance=ExtResource("1_y63u0")]
+title = "Repository Github"
+
+[node name="body" type="Label3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00917457, 0.5814592, 0)
+text = "This WebSite was made using the Godot Engine"
+autowrap_mode = 3
+width = 1000.0
+
+[node name="body2" type="Label3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00917457, 0.1528647, 0)
+text = "\\/ See the full open source code here \\/"
+autowrap_mode = 3
+width = 1000.0
+
+[node name="LinkButton3D" parent="." index="2" instance=ExtResource("2_f407r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012329221, -0.16302007, 0)
+url = "github.com/MyloRaccoon/portfolio"
