@@ -27,7 +27,7 @@ text = "Work-study program - Business Application Manager"
 
 [node name="Label3D4" type="Label3D" parent="." index="4"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.27737206, -0.531878, 0)
-text = "Emploi saisonnier - développement d’une application web en PHP"
+text = "Seasonal job - development of a web application in PHP"
 
 [node name="Label3D3" type="Label3D" parent="." index="5"]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.2868548, -0.33166316, 0)
