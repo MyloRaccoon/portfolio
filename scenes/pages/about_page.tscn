@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ojsqfkgeabjw"]
+[gd_scene load_steps=15 format=3 uid="uid://ojsqfkgeabjw"]
 
 [ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_vv6bg"]
 [ext_resource type="Script" uid="uid://cd3xgk14hsw6e" path="res://scripts/about_page.gd" id="2_5rn4r"]
@@ -7,8 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cxoqvg0o6ee54" path="res://scenes/pages/about_index_page.tscn" id="4_18eun"]
 [ext_resource type="PackedScene" uid="uid://c0sjkyhm12xs1" path="res://scenes/project_manager.tscn" id="4_prveq"]
 [ext_resource type="PackedScene" uid="uid://d0f4idhogw6ly" path="res://scenes/pages/link_page.tscn" id="6_5rn4r"]
+[ext_resource type="PackedScene" uid="uid://dvf86xt8th6mn" path="res://scenes/pages/soft_skill_page.tscn" id="7_5a04l"]
 [ext_resource type="PackedScene" uid="uid://cij76rl2ocisb" path="res://scenes/item_list.tscn" id="7_18hjt"]
 [ext_resource type="PackedScene" uid="uid://38jm5bt7df66" path="res://scenes/pages/skill_prog_page.tscn" id="7_pmgt2"]
+[ext_resource type="PackedScene" uid="uid://cqq4lst71phle" path="res://scenes/pages/experiences_page.tscn" id="7_q1vqa"]
 [ext_resource type="PackedScene" uid="uid://djx6nddexkn6a" path="res://scenes/pages/skill_game_dev_page.tscn" id="8_gtpch"]
 [ext_resource type="PackedScene" uid="uid://bkpa8hffhfqoh" path="res://scenes/pages/skill_music_page.tscn" id="9_gtpch"]
 [ext_resource type="PackedScene" uid="uid://hj8akg5j8voo" path="res://scenes/pages/github_web_page.tscn" id="11_yjcyt"]
@@ -31,19 +33,25 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 1.2086017)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0.0007965565)
 state = 2
 
-[node name="SkillProgPage" parent="ProjectManager" index="1" instance=ExtResource("7_pmgt2")]
+[node name="ExperiencesPage" parent="ProjectManager" index="1" instance=ExtResource("7_q1vqa")]
 state = 2
 
-[node name="SkillGameDevPage" parent="ProjectManager" index="2" instance=ExtResource("8_gtpch")]
+[node name="SoftSkillPage" parent="ProjectManager" index="2" instance=ExtResource("7_5a04l")]
 state = 2
 
-[node name="SkillMusicPage" parent="ProjectManager" index="3" instance=ExtResource("9_gtpch")]
+[node name="SkillProgPage" parent="ProjectManager" index="3" instance=ExtResource("7_pmgt2")]
 state = 2
 
-[node name="LinkPage" parent="ProjectManager" index="4" instance=ExtResource("6_5rn4r")]
+[node name="SkillGameDevPage" parent="ProjectManager" index="4" instance=ExtResource("8_gtpch")]
 state = 2
 
-[node name="GithubWebPage" parent="ProjectManager" index="5" instance=ExtResource("11_yjcyt")]
+[node name="SkillMusicPage" parent="ProjectManager" index="5" instance=ExtResource("9_gtpch")]
+state = 2
+
+[node name="LinkPage" parent="ProjectManager" index="6" instance=ExtResource("6_5rn4r")]
+state = 2
+
+[node name="GithubWebPage" parent="ProjectManager" index="7" instance=ExtResource("11_yjcyt")]
 state = 2
 
 [node name="ItemList" parent="." index="2" instance=ExtResource("7_18hjt")]

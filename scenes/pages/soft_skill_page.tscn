@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvf86xt8th6mn"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_cohdi"]
+
+[node name="SoftSkillPage" instance=ExtResource("1_cohdi")]
+title = "Values"
+
+[node name="head" type="Label3D" parent="." index="0"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.00917457, 0.7249301, 0)
+text = "I follow thoses principles:"
+autowrap_mode = 3
+width = 1000.0
+
+[node name="creativity" type="Label3D" parent="." index="1"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.6106095, 0.26358902, 0)
+text = "Creativity"
+autowrap_mode = 3
+width = 1000.0
+
+[node name="ambition" type="Label3D" parent="." index="2"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.020388782, 0.26358902, 0)
+text = "Ambition"
+autowrap_mode = 3
+width = 1000.0
+
+[node name="team" type="Label3D" parent="." index="3"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.4217582, 0.26358902, 0)
+text = "Team spirit"
+autowrap_mode = 3
+width = 1000.0
