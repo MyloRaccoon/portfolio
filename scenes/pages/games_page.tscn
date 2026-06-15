@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bw1nsup1y3xuf"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_13g6o"]
+[ext_resource type="Script" uid="uid://bqgwn8q04jhnh" path="res://scripts/project_page.gd" id="2_1xmd5"]
+[ext_resource type="Texture2D" uid="uid://dec77mvsp2ntm" path="res://assets/fullcog.png" id="2_okjd2"]
+[ext_resource type="Script" uid="uid://c74gv06fnjt53" path="res://scripts/main_cog.gd" id="3_awssl"]
+[ext_resource type="PackedScene" uid="uid://c0sjkyhm12xs1" path="res://scenes/project_manager.tscn" id="4_1xmd5"]
+[ext_resource type="PackedScene" uid="uid://bavkdtpqm5c88" path="res://scenes/pages/project_one_page.tscn" id="5_257oi"]
+[ext_resource type="PackedScene" uid="uid://b64t08xgxpj8e" path="res://scenes/pages/ping_page.tscn" id="6_yvllo"]
+[ext_resource type="PackedScene" uid="uid://m26ob8ioywit" path="res://scenes/pages/yaji_page.tscn" id="7_21avx"]
+[ext_resource type="PackedScene" uid="uid://t8ib4oqirxuw" path="res://scenes/pages/uru_page.tscn" id="8_hwxug"]
+[ext_resource type="PackedScene" uid="uid://cij76rl2ocisb" path="res://scenes/item_list.tscn" id="9_awssl"]
+
+[node name="GamesPage" unique_id=695544645 instance=ExtResource("1_13g6o")]
+script = ExtResource("2_1xmd5")
+
+[node name="MainCog" type="Sprite3D" parent="." index="0" unique_id=1898316487]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.4930742, -0.23260689, 1.741431)
+modulate = Color(0.45490196, 0, 0.5803922, 1)
+texture = ExtResource("2_okjd2")
+script = ExtResource("3_awssl")
+state = 2
+
+[node name="ProjectManager" parent="." index="1" unique_id=1476067487 instance=ExtResource("4_1xmd5")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 1.209)
+
+[node name="ProjectOnePage" parent="ProjectManager" index="0" unique_id=1140181278 instance=ExtResource("5_257oi")]
+state = 2
+
+[node name="PingPage" parent="ProjectManager" index="1" unique_id=1984183857 instance=ExtResource("6_yvllo")]
+state = 2
+
+[node name="YajiPage" parent="ProjectManager" index="2" unique_id=1128873480 instance=ExtResource("7_21avx")]
+state = 2
+
+[node name="UruPage" parent="ProjectManager" index="3" unique_id=743186458 instance=ExtResource("8_hwxug")]
+state = 2
+
+[node name="ItemList" parent="." index="2" unique_id=801105617 instance=ExtResource("9_awssl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.6, 1.6)
+
+[connection signal="snapped" from="ItemList" to="." method="_on_item_list_snapped"]

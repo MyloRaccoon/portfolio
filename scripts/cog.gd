@@ -1,8 +1,6 @@
-extends Node3D
+extends Sprite3D
 
 @export var speed: float
 
-@onready var sprite := $Sprite3D
-
 func _process(_delta: float) -> void:
-	sprite.rotate_z(speed)
+	rotate_z(speed)

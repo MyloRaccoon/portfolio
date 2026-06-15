@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b2ddpo8lsybuu"]
+
+[ext_resource type="Script" uid="uid://dw3mcu0juvmyp" path="res://scripts/anilist_activity.gd" id="1_4o15l"]
+
+[node name="AnilistActivity" type="Node3D" unique_id=1267332791]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+script = ExtResource("1_4o15l")
+
+[node name="title" type="Label3D" parent="." unique_id=2033578460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36024368, 0)
+text = "Last Anilist Activity:"
+
+[node name="activity" type="Label3D" parent="." unique_id=518827613]
+text = "disconnected"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=266990849]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 1.620177)

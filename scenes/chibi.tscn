@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dkm6lvfutvucx"]
+
+[ext_resource type="Script" uid="uid://b8rui3bq1ppr7" path="res://scripts/chibi.gd" id="1_724hw"]
+[ext_resource type="Texture2D" uid="uid://dnghmru7qi2bw" path="res://assets/chibi.png" id="1_giqaa"]
+
+[node name="Chibi" type="Node3D" unique_id=620872957]
+script = ExtResource("1_724hw")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1311863049]
+texture = ExtResource("1_giqaa")
+
+[node name="status" type="Label3D" parent="." unique_id=701997763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8794129, 1.5387026, 0)

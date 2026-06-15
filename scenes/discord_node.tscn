@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://bifhx0nf5ws0q"]
+
+[ext_resource type="Texture2D" uid="uid://xixixb14nr7a" path="res://assets/discord_banner.png" id="1_iglb3"]
+[ext_resource type="Script" uid="uid://dirxricaodmr5" path="res://scripts/discord_node.gd" id="1_w2uh4"]
+[ext_resource type="Texture2D" uid="uid://cxjgpxa4e76wx" path="res://assets/discord_avatar_placeholder.png" id="2_w2uh4"]
+[ext_resource type="Texture2D" uid="uid://c8tqfo3iw8y6m" path="res://assets/connected.png" id="3_7xuij"]
+[ext_resource type="Texture2D" uid="uid://ft7plgk8equ5" path="res://assets/avatar_cache.png" id="4_7xuij"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w2uh4"]
+size = Vector2(4, 1.28)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_w2uh4"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7xuij"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_w2uh4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2uh4"]
+texture = ExtResource("1_iglb3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7xuij"]
+texture = ExtResource("2_w2uh4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_w2uh4"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_7xuij"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_rtmsh"]
+font_size = 20
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rtmsh"]
+texture = ExtResource("4_7xuij")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_er2ei"]
+texture = ExtResource("3_7xuij")
+
+[node name="DiscordNode" type="Node3D" unique_id=2029346340]
+script = ExtResource("1_w2uh4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=799151382]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_w2uh4")
+surface_material_override/0 = SubResource("StandardMaterial3D_7xuij")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=158958920]
+
+[node name="Timer" type="Timer" parent="." unique_id=461489582]
+wait_time = 15.0
+autostart = true
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=374487567]
+size = Vector2i(500, 160)
+
+[node name="PanelContainer" type="PanelContainer" parent="SubViewport" unique_id=117950751]
+offset_right = 500.0
+offset_bottom = 160.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_w2uh4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SubViewport/PanelContainer" unique_id=1653829380]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewport/PanelContainer/HBoxContainer" unique_id=2102048293]
+custom_minimum_size = Vector2(12, 0)
+layout_mode = 2
+
+[node name="Avatar" type="PanelContainer" parent="SubViewport/PanelContainer/HBoxContainer" unique_id=2013156805]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_7xuij")
+
+[node name="MarginContainer2" type="MarginContainer" parent="SubViewport/PanelContainer/HBoxContainer" unique_id=2045372763]
+custom_minimum_size = Vector2(12, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewport/PanelContainer/HBoxContainer" unique_id=1501184326]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SubViewport/PanelContainer/HBoxContainer/VBoxContainer" unique_id=149515430]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewport/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1123350747]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="username" type="Label" parent="SubViewport/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1382819546]
+layout_mode = 2
+text = "Mylo"
+label_settings = SubResource("LabelSettings_w2uh4")
+
+[node name="MarginContainer2" type="MarginContainer" parent="SubViewport/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=439926424]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="globalname" type="Label" parent="SubViewport/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1107806239]
+layout_mode = 2
+text = "(mylo_raccoon)"
+label_settings = SubResource("LabelSettings_7xuij")
+vertical_alignment = 1
+
+[node name="status" type="Label" parent="SubViewport/PanelContainer/HBoxContainer/VBoxContainer" unique_id=2073520110]
+layout_mode = 2
+text = "caves are great"
+label_settings = SubResource("LabelSettings_rtmsh")
+
+[node name="avatar_cache" type="PanelContainer" parent="SubViewport" unique_id=1287737646]
+custom_minimum_size = Vector2(128, 128)
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_rtmsh")
+
+[node name="connected" type="PanelContainer" parent="SubViewport" unique_id=804099981]
+offset_left = 106.0
+offset_top = 108.0
+offset_right = 156.0
+offset_bottom = 158.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_er2ei")
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

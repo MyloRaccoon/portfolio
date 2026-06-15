@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dhdfui7ebj2jm"]
+
+[ext_resource type="Script" uid="uid://7hn87p7ouj4m" path="res://scripts/raccoonlive_api.gd" id="1_osa6g"]
+
+[node name="RaccoonLiveAPI" type="Node" unique_id=1042578657]
+script = ExtResource("1_osa6g")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1964783785]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_request_completed"]

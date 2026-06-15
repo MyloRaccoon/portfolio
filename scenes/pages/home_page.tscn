@@ -1,10 +1,68 @@
-[gd_scene load_steps=2 format=3 uid="uid://drvqynjsjan3m"]
+[gd_scene format=3 uid="uid://drvqynjsjan3m"]
 
 [ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_sfv0a"]
+[ext_resource type="PackedScene" uid="uid://c7iqkqbmwdemi" path="res://scenes/time_date.tscn" id="2_fld43"]
+[ext_resource type="Texture2D" uid="uid://wnn420jp5nnh" path="res://assets/logo_youtube.png" id="3_kh68c"]
+[ext_resource type="PackedScene" uid="uid://nauqj8h527xq" path="res://scenes/link_button_3d.tscn" id="4_5ei76"]
+[ext_resource type="Texture2D" uid="uid://5b70yqh50e" path="res://assets/logo_github.png" id="5_558ci"]
+[ext_resource type="Texture2D" uid="uid://jpnpbyyjfxnn" path="res://assets/logo_itch.png" id="6_sjxpb"]
+[ext_resource type="PackedScene" uid="uid://dkm6lvfutvucx" path="res://scenes/chibi.tscn" id="7_5ei76"]
+[ext_resource type="PackedScene" uid="uid://bifhx0nf5ws0q" path="res://scenes/discord_node.tscn" id="8_558ci"]
 
-[node name="HomePage" instance=ExtResource("1_sfv0a")]
+[node name="HomePage" unique_id=1050139023 instance=ExtResource("1_sfv0a")]
 
-[node name="welcome" type="Label3D" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.007170737, 0)
-text = "Welcome to Mylo's portfolio !"
+[node name="welcome" type="Label3D" parent="." index="0" unique_id=1092672143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2509533, 0)
+text = "Welcome to Mylo's Cool Nexus !"
+font_size = 25
 autowrap_mode = 3
+
+[node name="TimeDate" parent="." index="1" unique_id=112025329 instance=ExtResource("2_fld43")]
+transform = Transform3D(0.1, 0, 0, 0, 0.099387065, -0.011054962, 0, 0.011054962, 0.099387065, -0.875, 0.737, 0)
+
+[node name="LinkYoutube" parent="." index="2" unique_id=286423526 instance=ExtResource("4_5ei76")]
+transform = Transform3D(0.29999995, 0, 0, 0, 0.29999995, 0, 0, 0, 0.29999995, -0.5, -0.30220002, 0)
+text = "Youtube"
+url = "https://www.youtube.com/@MyloRaccoon"
+active = true
+
+[node name="LogoYoutube" type="Sprite3D" parent="." index="3" unique_id=1899194358]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.5, -0.1, 0)
+texture = ExtResource("3_kh68c")
+
+[node name="LinkGithub" parent="." index="4" unique_id=25640001 instance=ExtResource("4_5ei76")]
+transform = Transform3D(0.29999995, 0, 0, 0, 0.29999995, 0, 0, 0, 0.29999995, 0, -0.30220002, 0)
+text = "Github"
+url = "https://github.com/MyloRaccoon"
+active = true
+
+[node name="LogoGithub" type="Sprite3D" parent="." index="5" unique_id=1253917075]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.1, 0)
+texture = ExtResource("5_558ci")
+
+[node name="LinkItch" parent="." index="6" unique_id=786108234 instance=ExtResource("4_5ei76")]
+transform = Transform3D(0.32999992, 0, 0, 0, 0.32999992, 0, 0, 0, 0.32999992, 0.5, -0.32242003, 0)
+text = "Itch.io"
+url = "https://mylo-racoon.itch.io/"
+active = true
+
+[node name="LogoItch" type="Sprite3D" parent="." index="7" unique_id=923339224]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0.5, -0.1, 0)
+texture = ExtResource("6_sjxpb")
+
+[node name="Chibi" parent="." index="8" unique_id=620872957 instance=ExtResource("7_5ei76")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.6626945, -0.57957697, -0.28875124)
+visible = false
+
+[node name="DiscordNode" parent="." index="9" unique_id=2029346340 instance=ExtResource("8_558ci")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.124752, -0.46471485, -0.10947049)
+
+[node name="lbl_mail" type="Label3D" parent="." index="10" unique_id=530370833]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.59531975, -0.5393194, -0.14309618)
+text = "contact me"
+
+[node name="link_mail" parent="." index="11" unique_id=201084076 instance=ExtResource("4_5ei76")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.6612592, -0.65547216, -0.14309618)
+text = "joachim.fevre@gmail.com
+"
+url = "mailto:joachim.fevre@gmail.com"

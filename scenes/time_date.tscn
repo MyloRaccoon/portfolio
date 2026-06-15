@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c7iqkqbmwdemi"]
+
+[ext_resource type="PackedScene" uid="uid://bqn3srr48uucj" path="res://scenes/cog.tscn" id="2_6wcey"]
+[ext_resource type="Script" uid="uid://b7qamvtkpiqk8" path="res://scripts/time_date.gd" id="2_yr5cj"]
+
+[node name="TimeDate" type="Node3D" unique_id=20934356]
+script = ExtResource("2_yr5cj")
+
+[node name="Cog" parent="." unique_id=1035126237 instance=ExtResource("2_6wcey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07743555)
+modulate = Color(0.35686275, 0.23529412, 0.4117647, 1)
+speed = 10.0
+
+[node name="Time" type="Label3D" parent="." unique_id=1438990431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217, 0.1)
+text = "17:00"
+font_size = 150
+
+[node name="Date" type="Label3D" parent="." unique_id=2053364386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.458, 0.1)
+text = "mer. 08/04"
+font_size = 50

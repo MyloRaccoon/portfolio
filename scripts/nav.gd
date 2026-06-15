@@ -18,22 +18,22 @@ func set_active(boolean: bool):
 func set_page(page: SuperPage):
 	if page == SuperPage.HOME:
 		head.text = "Home"
-		lbl_next.text = "About me"
+		lbl_next.text = "Programming"
 		lbl_next.show()
 		btn_next.show()
 		btn_next.active = true
-		lbl_prev.text = "Projects"
+		lbl_prev.text = "Games"
 		lbl_prev.show()
 		btn_prev.show()
 		btn_prev.active = true
-	if page == SuperPage.PROJECTS:
-		head.text = "Projects"
+	if page == SuperPage.GAMES:
+		head.text = "Games"
 		lbl_next.text = "Home"
 		lbl_prev.hide()
 		btn_prev.hide()
 		btn_prev.active = false
-	if page == SuperPage.ABOUT:
-		head.text = "About me"
+	if page == SuperPage.PROGRAMMING:
+		head.text = "Programming"
 		lbl_prev.text = "Home"
 		lbl_next.hide()
 		btn_next.hide()

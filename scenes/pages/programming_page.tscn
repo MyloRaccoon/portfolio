@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://s8y1xuoso6xc"]
+
+[ext_resource type="PackedScene" uid="uid://dyefchu2vbpfy" path="res://scenes/page.tscn" id="1_0pdpd"]
+[ext_resource type="Script" uid="uid://cd3xgk14hsw6e" path="res://scripts/about_page.gd" id="2_ntasr"]
+[ext_resource type="Texture2D" uid="uid://dec77mvsp2ntm" path="res://assets/fullcog.png" id="3_dgw31"]
+[ext_resource type="Script" uid="uid://c74gv06fnjt53" path="res://scripts/main_cog.gd" id="4_udce8"]
+[ext_resource type="PackedScene" uid="uid://c0sjkyhm12xs1" path="res://scenes/project_manager.tscn" id="5_6kxck"]
+[ext_resource type="PackedScene" uid="uid://b3cmkqvlxwhdi" path="res://scenes/pages/ytmtui_page.tscn" id="6_5gc1h"]
+[ext_resource type="PackedScene" uid="uid://bdjk3pdwrvbt" path="res://scenes/pages/cool_tool_page.tscn" id="7_4i7fh"]
+[ext_resource type="PackedScene" uid="uid://b7m1gq6qb7gtu" path="res://scenes/pages/anilist_page.tscn" id="8_6q8xv"]
+[ext_resource type="PackedScene" uid="uid://hj8akg5j8voo" path="res://scenes/pages/github_web_page.tscn" id="13_6m07l"]
+[ext_resource type="PackedScene" uid="uid://cij76rl2ocisb" path="res://scenes/item_list.tscn" id="14_ac631"]
+
+[node name="ProgrammingPage" unique_id=592923525 instance=ExtResource("1_0pdpd")]
+script = ExtResource("2_ntasr")
+title = "Programming"
+
+[node name="MainCog" type="Sprite3D" parent="." index="0" unique_id=2065237476]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.493, -0.233, 1.741)
+modulate = Color(0.45490196, 0, 0.5803922, 1)
+texture = ExtResource("3_dgw31")
+script = ExtResource("4_udce8")
+reversed = true
+state = 2
+
+[node name="ProjectManager" parent="." index="1" unique_id=164343443 instance=ExtResource("5_6kxck")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 1.2086017)
+
+[node name="YTMTUIPage" parent="ProjectManager" index="0" unique_id=1468064254 instance=ExtResource("6_5gc1h")]
+state = 2
+
+[node name="CoolToolPage" parent="ProjectManager" index="1" unique_id=260217440 instance=ExtResource("7_4i7fh")]
+state = 2
+
+[node name="AnilistPage" parent="ProjectManager" index="2" unique_id=1357024019 instance=ExtResource("8_6q8xv")]
+state = 2
+
+[node name="GithubWebPage" parent="ProjectManager" index="3" unique_id=917438416 instance=ExtResource("13_6m07l")]
+state = 2
+
+[node name="ItemList" parent="." index="2" unique_id=1105381364 instance=ExtResource("14_ac631")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.6, 1.6)
+state = 2
+
+[connection signal="snapped" from="ItemList" to="." method="_on_item_list_snapped"]

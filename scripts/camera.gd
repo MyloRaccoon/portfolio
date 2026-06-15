@@ -8,8 +8,8 @@ func _process(delta: float) -> void:
 	var mouse_pos := viewport.get_mouse_position()
 	var size := viewport.get_visible_rect().size
 
-	var mouse_x := -((mouse_pos.x / size.x) * 2.0 - 1.0)
-	var mouse_y := -((mouse_pos.y / size.y) * 2.0 - 1.0)
+	var mouse_x := -((mouse_pos.x / size.x) * 2.0 -1)
+	var mouse_y := -((mouse_pos.y / size.y) * 2.0 -1)
 
 	var target_tilt_x = clamp(
 		mouse_x * max_tilt_deg,
