@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://duv08fls8mmkx"]
+
+[ext_resource type="Script" uid="uid://br87yicsje74" path="res://scripts/discord_profile.gd" id="1_n64dg"]
+
+[node name="DiscordProfile" type="Node3D" unique_id=1363263827]
+script = ExtResource("1_n64dg")
+
+[node name="Username" type="Label3D" parent="." unique_id=844310783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18986031, 0)
+text = "Username"
+
+[node name="Activity" type="Label3D" parent="." unique_id=573650143]
+text = "Activity"
+
+[node name="Status" type="Label3D" parent="." unique_id=705494276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20408078, 0)
+text = "Status"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=170249239]
+transform = Transform3D(1, 0, 0, 0, 0.99975437, -0.022163868, 0, 0.022163868, 0.99975437, -0.030720294, 0.041436195, 2.6706798)
+far = 100000.0
+
+[node name="Timer" type="Timer" parent="." unique_id=357521536]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
